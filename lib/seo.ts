@@ -3,8 +3,30 @@ import { EMAIL, PHONE } from '@/lib/brand';
 
 export const SITE_NAME = 'AAI Built';
 export const SITE_TAGLINE = 'Your next chapter. Built in.';
-export const SITE_URL =
-  process.env.SITE_URL?.replace(/\/$/, '') ?? 'https://www.aaibuilt.com';
+const DEFAULT_SITE_URL = 'https://www.aaibuilt.com';
+
+function normalizeSiteUrl(raw?: string): string {
+  if (!raw?.trim()) return DEFAULT_SITE_URL;
+
+  let url = raw.trim().replace(/\/$/, '');
+
+  // Common copy/paste typo in env vars.
+  if (url.startsWith('ttps://')) url = `h${url}`;
+  if (url.startsWith('tps://')) url = `ht${url}`;
+
+  if (!/^https?:\/\//i.test(url)) {
+    url = `https://${url.replace(/^\/+/, '')}`;
+  }
+
+  try {
+    const parsed = new URL(url);
+    return parsed.origin;
+  } catch {
+    return DEFAULT_SITE_URL;
+  }
+}
+
+export const SITE_URL = normalizeSiteUrl(process.env.SITE_URL);
 
 export const DEFAULT_DESCRIPTION =
   'Custom software for ambitious SMEs. Human business expertise, augmented by AI. CRM, sales, operations, lead generation and team tools built around your business.';
