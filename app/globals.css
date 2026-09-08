@@ -101,18 +101,12 @@ button:focus-visible {
 .brand {
   display: inline-flex;
   align-items: center;
-  gap: 8px;
-  font-size: 22px;
-  letter-spacing: -0.9px;
-  font-weight: 750;
   white-space: nowrap;
 }
-.brand-light {
-  font-weight: 450;
-}
-.brand svg {
-  width: 32px;
-  height: 32px;
+.brand-logo {
+  display: block;
+  height: 46px;
+  width: auto;
 }
 .desktop-nav {
   display: flex;
@@ -900,11 +894,8 @@ p {
   .nav-inner {
     width: 90%;
   }
-  .brand {
-    font-size: 20px;
-  }
-  .brand svg {
-    width: 28px;
+  .brand-logo {
+    height: 40px;
   }
   .pill.small {
     font-size: 11px;
@@ -2573,9 +2564,9 @@ p {
 .header-whatsapp:hover {
   background: #d1f0dd;
 }
-.brand svg {
-  width: 35px;
-  height: 35px;
+.brand-logo {
+  height: 46px;
+  width: auto;
 }
 .connect-popup {
   width: min(610px, calc(100% - 28px)) !important;
@@ -2685,9 +2676,8 @@ p {
   .header-whatsapp svg {
     width: 20px;
   }
-  .brand svg {
-    width: 30px;
-    height: 30px;
+  .brand-logo {
+    height: 36px;
   }
   .connect-popup {
     padding: 25px !important;

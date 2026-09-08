@@ -1,4 +1,5 @@
 'use client';
+import Image from 'next/image';
 import Link from '@/components/brand/site-link';
 import { usePathname } from 'next/navigation';
 import { useState } from 'react';
@@ -11,23 +12,17 @@ import {
   SheetDescription,
 } from '@/components/ui/sheet';
 import { EMAIL, PHONE, whatsapp } from '@/lib/brand';
-export function Mark() {
-  return (
-    <svg viewBox="0 0 56 56" aria-hidden="true">
-      <rect x="1" y="1" width="54" height="54" rx="15" fill="#245de8" />
-      <path d="M9 41 22 14h7L17 41Z" fill="white" />
-      <path d="m27 14 13 27h-8l-4-9h-8l3-6h3l-3-6Z" fill="white" />
-      <path d="M42 15h5v26h-5Z" fill="#91baff" />
-    </svg>
-  );
-}
 export function Brand() {
   return (
     <Link href="/" className="brand" aria-label="AAI Built home">
-      <Mark />
-      <span>
-        AAI<span className="brand-light"> Built</span>
-      </span>
+      <Image
+        src="/brand/aai-built-logo.png"
+        alt=""
+        width={1593}
+        height={289}
+        className="brand-logo"
+        priority
+      />
     </Link>
   );
 }
@@ -155,7 +150,7 @@ export function Footer() {
             <span className="footer-label">AAI BUILT</span>
             <Link href="/about">Our story</Link>
             <Link href="/approach">Our approach</Link>
-            <a href="/aai-built-logo.svg" download>
+            <a href="/brand/aai-built-logo.png" download>
               Brand mark ↗
             </a>
           </div>

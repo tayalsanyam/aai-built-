@@ -28,7 +28,7 @@ Project facts are based on the founder’s supplied descriptions. Existing produ
 
 ## Conversion
 WhatsApp: +91 70091 91914 (wa.me/917009191914)
-Email: Letsbuild@aaibuilt.com
+Email: sanyamptayal@aaibuilt.com
 Contextual WhatsApp messages for Lead Engine, project walkthroughs, and general discovery.
 The brief composer submits no data to the website and sends no message automatically.
 Retain downloadable discovery brief and brand mark.

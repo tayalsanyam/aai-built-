@@ -1,4 +1,4 @@
-export const EMAIL = 'Letsbuild@aaibuilt.com';
+export const EMAIL = 'sanyamptayal@aaibuilt.com';
 export const PHONE = '+91 70091 91914';
 export const whatsapp = (
   message = 'Hi Sanyam, I’d like to explore custom software for my business.',

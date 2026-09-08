@@ -15,9 +15,9 @@ The normal npm run build is retained for the existing Sites review build; Vercel
 
 ## Activate enquiry delivery — required before launch
 
-The popup and contact page POST to https://formsubmit.co/Letsbuild@aaibuilt.com.
+The popup and contact page POST to https://formsubmit.co/sanyamptayal@aaibuilt.com.
 
-Submit one genuine test enquiry from your deployed website. FormSubmit will email Letsbuild@aaibuilt.com an activation link. Open that email and activate the form. Then submit another test and verify the enquiry arrives, including the visitor's name, business, email, optional phone, message, and source. Check spam if necessary.
+Submit one genuine test enquiry from your deployed website. FormSubmit will email sanyamptayal@aaibuilt.com an activation link. Open that email and activate the form. Then submit another test and verify the enquiry arrives, including the visitor's name, business, email, optional phone, message, and source. Check spam if necessary.
 
 Email delivery has not been activated or verified by the agent. The integration and browser validation are implemented; receipt depends on this provider activation. No test message was sent by the agent.
 

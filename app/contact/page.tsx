@@ -6,7 +6,7 @@ import { EMAIL, PHONE, whatsapp } from '@/lib/brand';
 export const metadata: Metadata = {
   title: 'Let’s build — Contact AAI Built',
   description:
-    'Talk to Sanyam Tayal about custom business software. WhatsApp +91 70091 91914 or email Letsbuild@aaibuilt.com.',
+    'Talk to Sanyam Tayal about custom business software. WhatsApp +91 70091 91914 or email sanyamptayal@aaibuilt.com.',
 };
 export default function Contact() {
   return (
