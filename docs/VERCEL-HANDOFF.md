@@ -7,7 +7,7 @@ The project supports two builds. The private review site uses Sites; your Vercel
 1. Extract the source ZIP and push its contents to your Git repository.
 2. In your Vercel account, choose Add New → Project and import that repository.
 3. Use the project root. The included vercel.json selects Next.js, runs npm ci, and builds with npm run build:vercel.
-4. Deploy. No database or environment variables are required for the current website.
+4. Deploy. No database is required. Optional server-only env var: `SITE_URL=https://www.aaibuilt.com` (do not use a `NEXT_PUBLIC_` prefix — canonical URLs are built on the server).
 5. Add aaibuilt.com and www.aaibuilt.com to the project's Domains settings and apply the DNS records Vercel gives you.
 
 Local Vercel-equivalent commands: npm ci, npm run build:vercel, npm run start:vercel.

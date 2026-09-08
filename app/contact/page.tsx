@@ -3,11 +3,20 @@ import { ArrowUpRight, MessageCircle, Mail, Check } from 'lucide-react';
 import { PageIntro } from '@/components/brand/sections';
 import ContactForm from '@/components/brand/contact-form';
 import { EMAIL, PHONE, whatsapp } from '@/lib/brand';
-export const metadata: Metadata = {
-  title: 'Let’s build — Contact AAI Built',
+import { createPageMetadata } from '@/lib/seo';
+
+export const metadata: Metadata = createPageMetadata({
+  title: 'Contact — Let’s build',
   description:
     'Talk to Sanyam Tayal about custom business software. WhatsApp +91 70091 91914 or email sanyamptayal@aaibuilt.com.',
-};
+  path: '/contact',
+  keywords: [
+    'contact AAI Built',
+    'custom software enquiry',
+    'SME software consultation',
+    'business software quote India',
+  ],
+});
 export default function Contact() {
   return (
     <main>

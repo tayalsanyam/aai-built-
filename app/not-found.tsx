@@ -1,4 +1,13 @@
 import Link from '@/components/brand/site-link';
+import { createPageMetadata } from '@/lib/seo';
+
+export const metadata = createPageMetadata({
+  title: 'Page not found',
+  description: 'The page you requested could not be found on AAI Built.',
+  path: '/404',
+  noIndex: true,
+});
+
 export default function NotFound() {
   return (
     <main className="page-intro container">

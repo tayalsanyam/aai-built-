@@ -9,11 +9,21 @@ import {
   KeyRound,
 } from 'lucide-react';
 import { PageIntro, SectionHead } from '@/components/brand/sections';
-export const metadata: Metadata = {
+import { createPageMetadata } from '@/lib/seo';
+
+export const metadata: Metadata = createPageMetadata({
   title: 'Our approach — Business first, then software',
   description:
     'From spreadsheets and workflow discovery to a focused build, team adoption, hosting and handover.',
-};
+  path: '/approach',
+  keywords: [
+    'software discovery process',
+    'custom software approach',
+    'SME software rollout',
+    'workflow mapping',
+    'iterative software build',
+  ],
+});
 const steps = [
   {
     icon: MessagesSquare,

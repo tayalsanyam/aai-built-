@@ -4,6 +4,8 @@ import './globals.css';
 import { Header, Footer } from '@/components/brand/shell';
 import PageMotion from '@/components/brand/motion';
 import ConnectPopup from '@/components/brand/connect-popup';
+import StructuredData from '@/components/brand/structured-data';
+import { rootMetadata } from '@/lib/seo';
 
 const geistSans = Geist({
   variable: '--font-geist-sans',
@@ -16,12 +18,11 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
+  ...rootMetadata,
   title: {
     default: 'AAI Built — Your next chapter. Built in.',
     template: '%s | AAI Built',
   },
-  description:
-    'Custom software for ambitious SMEs. Human business expertise, augmented by AI. CRM, sales, operations and team tools built around your business.',
 };
 
 export default function RootLayout({
@@ -30,10 +31,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en-IN">
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
+        <StructuredData />
         <a href="#main-content" className="skip-link">
           Skip to content
         </a>

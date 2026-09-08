@@ -14,6 +14,23 @@ import {
   ProjectCards,
   Ownership,
 } from '@/components/brand/sections';
+import { createPageMetadata } from '@/lib/seo';
+
+export const metadata = createPageMetadata({
+  title: 'Your next chapter. Built in.',
+  description:
+    'Custom software for ambitious SMEs. Human business expertise, augmented by AI. CRM, sales, operations and team tools built around your business.',
+  path: '/',
+  absoluteTitle: 'AAI Built — Your next chapter. Built in.',
+  keywords: [
+    'custom software for SMEs',
+    'business software India',
+    'AI software development',
+    'custom CRM',
+    'SME technology partner',
+  ],
+});
+
 export default function Home() {
   return (
     <main>

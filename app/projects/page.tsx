@@ -1,10 +1,20 @@
 import type { Metadata } from 'next';
 import { PageIntro, ProjectCards } from '@/components/brand/sections';
-export const metadata: Metadata = {
+import { createPageMetadata } from '@/lib/seo';
+
+export const metadata: Metadata = createPageMetadata({
   title: 'Projects — Purpose-built business technology',
   description:
     'Explore Fusion Algo trading technology, Olready operational CRM, and Crew attendance, calling and recruitment tools.',
-};
+  path: '/projects',
+  keywords: [
+    'Fusion Algo',
+    'Olready CRM',
+    'Crew team software',
+    'custom business products',
+    'purpose-built software',
+  ],
+});
 export default function Projects() {
   return (
     <main>

@@ -3,11 +3,21 @@ import type { Metadata } from 'next';
 import { ArrowUpRight, Plus } from 'lucide-react';
 import { PageIntro } from '@/components/brand/sections';
 import { whatsapp } from '@/lib/brand';
-export const metadata: Metadata = {
-  title: 'About — Sanyam Tayal and AAI Built',
+import { createPageMetadata } from '@/lib/seo';
+
+export const metadata: Metadata = createPageMetadata({
+  title: 'About Sanyam Tayal and AAI Built',
   description:
     '12 years across distribution, retail, wholesale, construction, technology and consulting. Meet the business experience behind AAI Built.',
-};
+  path: '/about',
+  keywords: [
+    'Sanyam Tayal',
+    'AAI Built founder',
+    'business software consultant India',
+    'HAG India',
+    'Myfresh',
+  ],
+});
 export default function About() {
   return (
     <main>

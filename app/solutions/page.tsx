@@ -3,11 +3,21 @@ import Link from '@/components/brand/site-link';
 import { ArrowUpRight, ArrowRight, Check } from 'lucide-react';
 import { PageIntro, SectionHead, Ownership } from '@/components/brand/sections';
 import SolutionExplorer from '@/components/brand/solution-explorer';
-export const metadata: Metadata = {
+import { createPageMetadata } from '@/lib/seo';
+
+export const metadata: Metadata = createPageMetadata({
   title: 'Solutions built around your business',
   description:
     'Explore custom CRM, operations, team tools, lead generation and applied AI for SMEs.',
-};
+  path: '/solutions',
+  keywords: [
+    'custom CRM for SMEs',
+    'operations software',
+    'team management software',
+    'applied AI for business',
+    'sales and operations platform',
+  ],
+});
 export default function Solutions() {
   return (
     <main>

@@ -11,11 +11,21 @@ import {
 } from 'lucide-react';
 import { PageIntro, SectionHead } from '@/components/brand/sections';
 import { whatsapp } from '@/lib/brand';
-export const metadata: Metadata = {
-  title: 'Lead Engine — From business research to sales action',
+import { createPageMetadata } from '@/lib/seo';
+
+export const metadata: Metadata = createPageMetadata({
+  title: 'Lead Engine — From research to sales action',
   description:
     'Custom lead research, permitted web data extraction, enrichment, qualification and CRM workflows for your sales team.',
-};
+  path: '/lead-engine',
+  keywords: [
+    'lead generation software',
+    'B2B lead research',
+    'sales pipeline automation',
+    'CRM lead qualification',
+    'business data enrichment',
+  ],
+});
 export default function LeadEngine() {
   return (
     <main className="lead-page">

@@ -4,14 +4,28 @@ import { notFound } from 'next/navigation';
 import { ArrowUpRight, ArrowLeft, ArrowRight } from 'lucide-react';
 import { projects, whatsapp } from '@/lib/brand';
 import { ProjectVisual } from '@/components/brand/sections';
+import { createPageMetadata } from '@/lib/seo';
+
 type Props = { params: Promise<{ slug: string }> };
+
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
   const p = projects.find((x) => x.slug === slug);
-  return {
-    title: p ? `${p.name} — ${p.category}` : 'Project not found',
-    description: p?.description,
-  };
+  if (!p) {
+    return createPageMetadata({
+      title: 'Project not found',
+      description: 'The requested AAI Built project could not be found.',
+      path: `/projects/${slug}`,
+      noIndex: true,
+    });
+  }
+
+  return createPageMetadata({
+    title: `${p.name} — ${p.category}`,
+    description: p.description,
+    path: `/projects/${p.slug}`,
+    keywords: [p.name, p.category, 'AAI Built project', 'custom business software'],
+  });
 }
 export default async function ProjectPage({ params }: Props) {
   const { slug } = await params;
